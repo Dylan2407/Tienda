@@ -20,7 +20,7 @@ public class CategoriasServiceImpl implements CategoriaService {
         List<Categoria> categorias = categoriaDao.findAll();
 
         if (activos) {
-            categorias.removeIf(c -> c.isActivo());
+            categorias.removeIf(c -> !c.isActivo());
 
         }
 

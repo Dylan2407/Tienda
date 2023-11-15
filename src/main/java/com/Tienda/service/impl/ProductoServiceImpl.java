@@ -20,7 +20,7 @@ public class ProductoServiceImpl implements ProductoService {
         List<Producto> productos = productoDao.findAll();
 
         if (activos) {
-            productos.removeIf(p -> p.isActivo());
+            productos.removeIf(p -> !p.isActivo());
 
         }
 
